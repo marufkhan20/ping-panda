@@ -25,7 +25,7 @@ model User {
   apiKey     String   @unique @default(cuid())
   discordId  String?
   createdAt  DateTime @default(now())
-  updatdAt   DateTime @default(now())
+  updatedAt  DateTime @default(now())
 
   EventCategories EventCategory[]
   Event           Event[]
@@ -44,7 +44,7 @@ model EventCategory {
   userId String
 
   createdAt DateTime @default(now())
-  updatdAt  DateTime @default(now())
+  updatedAt DateTime @default(now())
   Event     Event[]
 
   @@unique([name, userId])
@@ -69,7 +69,7 @@ model Event {
   deliveryStatus DeliveryStatus @default(PENDING)
 
   createdAt DateTime @default(now())
-  updatdAt  DateTime @default(now())
+  updatedAt DateTime @default(now())
 
   EventCategory   EventCategory @relation(fields: [eventCategoryId], references: [id])
   eventCategoryId String
@@ -87,5 +87,5 @@ model Quota {
   count Int @default(0)
 
   createdAt DateTime @default(now())
-  updatdAt  DateTime @default(now())
+  updatedAt DateTime @default(now())
 }
