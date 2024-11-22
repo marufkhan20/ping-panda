@@ -74,7 +74,7 @@ export const UpgradePageContent = ({ plan }: UpgradePageContentProps) => {
           <div>
             <p className="text-2xl font-bold">
               {usageData?.categoriesUsed || 0} of{" "}
-              {usageData?.categoriesUsed.toLocaleString() || 3}
+              {usageData?.categoriesLimit.toLocaleString() || 3}
             </p>
             <p className="text-xs/5 text-muted-foreground">Active categories</p>
           </div>
